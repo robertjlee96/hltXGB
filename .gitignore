@@ -1,0 +1,11 @@
+*.xml
+*.model
+*.Model
+*.root
+oldTmp/
+NTuplesOLD/
+Training/barrelOut/
+Training/endcapOut/
+AllPhotonValidation/sigBkgVarPlots/
+AllPhotonValidation/outROC/
+AllPhotonValidation/validationNTuples/

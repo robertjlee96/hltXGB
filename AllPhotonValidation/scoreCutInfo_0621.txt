@@ -1,0 +1,46 @@
+
+Processing threeEtaXGBScoreSelection.C...
+propHLT = 0.896233
+propIDMVACut = 0.89568
+ =========================== 
+cutBB = 0.2
+sigEffBB = 0.993892, bkgEffBB = 0.00858779
+cutBE = 0.369261
+sigEffBE = 0.96679, bkgEffBE = 0.00919842
+cutEE = 0.516966
+sigEffEE = 0.954766, bkgEffEE = 0.00867679
+ =========================== 
+cutBB = 0.25
+sigEffBB = 0.992952, bkgEffBB = 0.00572519
+cutBE = 0.417166
+sigEffBE = 0.962027, bkgEffBE = 0.00624179
+cutEE = 0.546906
+sigEffEE = 0.952612, bkgEffEE = 0.00542299
+ =========================== 
+cutBB = 0.3
+sigEffBB = 0.991778, bkgEffBB = 0.00477099
+cutBE = 0.453094
+sigEffBE = 0.957925, bkgEffBE = 0.00492773
+cutEE = 0.59481
+sigEffEE = 0.948842, bkgEffEE = 0.00433839
+ =========================== 
+cutBB = 0.35
+sigEffBB = 0.990368, bkgEffBB = 0.00381679
+cutBE = 0.491018
+sigEffBE = 0.952104, bkgEffBE = 0.00394218
+ =========================== 
+cutBB = 0.4
+sigEffBB = 0.988645, bkgEffBB = 0.0019084
+cutBE = 0.640719
+sigEffBE = 0.924716, bkgEffBE = 0.00197109
+ =========================== 
+cutBB = 0.45
+sigEffBB = 0.986609, bkgEffBB = 0.0019084
+cutBE = 0.640719
+sigEffBE = 0.924716, bkgEffBE = 0.00197109
+ =========================== 
+cutBB = 0.5
+sigEffBB = 0.985121, bkgEffBB = 0.0019084
+cutBE = 0.640719
+sigEffBE = 0.924716, bkgEffBE = 0.00197109
+Final Cuts: BE = 0.640719, EE = 0.59481

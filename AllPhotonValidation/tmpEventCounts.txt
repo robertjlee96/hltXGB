@@ -1,0 +1,28 @@
+===== signal Train =====
+Total Input = 37679
+Passing L1 = 31871
+Passing Pair = 28915
+Passing Eta = 26973
+Passing Eta & Et = 26172
+Actual nOut = 26172
+===== background Train =====
+Total Input = 5831802
+Passing L1 = 965920
+Passing Pair = 498081
+Passing Eta = 478775
+Passing Eta & Et = 311133
+Actual nOut = 311133
+===== signal Vali =====
+Total Input = 37671
+Passing L1 = 31829
+Passing Pair = 28956
+Passing Eta = 27016
+Passing Eta & Et = 26223
+Actual nOut = 26223
+===== Background Vali =====
+Total Input = 5807249
+Passing L1 = 963259
+Passing Pair = 496178
+Passing Eta = 476943
+Passing Eta & Et = 310114
+Actual nOut = 310114

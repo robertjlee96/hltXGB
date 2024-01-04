@@ -1,0 +1,54 @@
+=============================
+0725/M1LR01_GGH13andData_NoTrkIso_M60_0725
+Run Time(sec) =  0.4901
+=============================
+0725/M1LR99_GGH13andData_NoTrkIso_M60_0725
+Run Time(sec) =  0.1050
+=============================
+0725/M2LR90_GGH13andData_NoTrkIso_M60_0725
+Run Time(sec) =  0.0478
+=============================
+0725/M5LR15_GGH13andData_NoTrkIso_M60_0725
+Run Time(sec) =  0.1518
+=============================
+0725/M5LR20_GGH13andData_NoTrkIso_M60_0725
+Run Time(sec) =  0.1286
+=============================
+0725/M7LR05_GGH13andData_NoTrkIso_M60_0725
+Run Time(sec) =  0.4301
+=============================
+0725/M7LR10_GGH13andData_NoTrkIso_M60_0725
+Run Time(sec) =  0.1849
+=============================
+0725/M7LR15_GGH13andData_NoTrkIso_M60_0725
+Run Time(sec) =  0.1815
+=============================
+0725/M9LR01_GGH13andData_NoTrkIso_M60_0725
+Run Time(sec) =  2.2109
+=============================
+0725/M9LR03_GGH13andData_NoTrkIso_M60_0725
+Run Time(sec) =  0.8017
+=============================
+0725/M9LR15_GGH13andData_NoTrkIso_M60_0725
+Run Time(sec) =  0.1719
+=============================
+0725/M9LR20_GGH13andData_NoTrkIso_M60_0725
+Run Time(sec) =  0.1211
+=============================
+0726/M13LR1_GGH13andData_NoTrkIso_M60_0726
+Run Time(sec) =  0.3089
+=============================
+0726/M13LR2_GGH13andData_NoTrkIso_M60_0726
+Run Time(sec) =  0.1461
+=============================
+0726/M13LR3_GGH13andData_NoTrkIso_M60_0726
+Run Time(sec) =  0.1037
+=============================
+0726/M15LR10_GGH13andData_NoTrkIso_M60_0726
+Run Time(sec) =  0.2745
+=============================
+0726/M15LR30_GGH13andData_NoTrkIso_M60_0726
+Run Time(sec) =  0.1264
+=============================
+0726/M15LR50_GGH13andData_NoTrkIso_M60_0726
+Run Time(sec) =  0.0806
