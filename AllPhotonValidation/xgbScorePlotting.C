@@ -32,14 +32,14 @@ void xgbScorePlotting(){
     gStyle->SetOptStat(0);
     gStyle->SetTitle(0);
     
-    string fileName = "validationNTuples/1117/M7L25_GGH13andDataD_NoTrkIso_M60_PdgIDTrain_1117_PdgIDVali_1117.root";
+    string fileName = "validationNTuples/0206/M7L25_GGHSummer23andDataD_DiphotonV6_M60_0206.root";
     string genTitleStringSignal = "GGH Signal ";
     string genTitleStringBkg = "Data ";
-    string dirStr ="sigBkgVarPlots/1117/MD7L25_GGH13andDataD_NoTrkIso_M60_pdgIDCutValiANDTrain_Added/";
+    string dirStr ="sigBkgVarPlots/0212/MD7L25_GGHSummer23andDataD_M60_ScalePosWeight01_NewCuts_0212_Separate/";
     string plotType = "Added";
-    string out2D = dirStr + "highandLowScore_XGBCut_M95_1117";
-    string outLead = dirStr + "highScore_XGBCut_M95_1117";
-    string outSub = dirStr + "lowScore_XGBCut_M95_1117";
+    string out2D = dirStr + "highandLowScore_XGBCut_M95_0212";
+    string outLead = dirStr + "highScore_XGBCut_M95_0212";
+    string outSub = dirStr + "lowScore_XGBCut_M95_0212";
     //string plotType = "Separate";
     //string dirStr ="varPlots/0130/DataRelaxedUnseededChoose2/";
     
@@ -50,11 +50,18 @@ void xgbScorePlotting(){
     string etaFLabels[4] = {"_BB","_BE","_EE","_All"};
     
     //New cuts (11/09) chosen by hand (just Barrel and Endcap)
-    double leadCuts1[2] = {0.85,0.90};
-    double subCuts1[2] = {0.0,0.0};//If First score above leadCuts1, second score must be above subCuts1
-    double leadCuts2[2] = {0.75,0.8};
-    double subCuts2[2] = {0.015,0.02};//If First score between leadCuts1 and leadCuts2, second score must be above subCuts2
-    double subCuts3[2] = {0.075,0.075};//If First score below leadCuts2, second score must be above subCuts3
+//    double leadCuts1[2] = {0.85,0.90};
+//    double subCuts1[2] = {0.0,0.0};//If First score above leadCuts1, second score must be above subCuts1
+//    double leadCuts2[2] = {0.75,0.8};
+//    double subCuts2[2] = {0.015,0.02};//If First score between leadCuts1 and leadCuts2, second score must be above subCuts2
+//    double subCuts3[2] = {0.075,0.075};//If First score below leadCuts2, second score must be above subCuts3
+//    
+//New cuts (02/10) chosen by hand (just Barrel and Endcap)
+    double leadCuts1[2] = {0.96,0.995};
+    double subCuts1[2] = {0.0,0.1};//If First score above leadCuts1, second score must be above subCuts1
+    double leadCuts2[2] = {0.91,0.96};
+    double subCuts2[2] = {0.1,0.2};//If First score between leadCuts1 and leadCuts2, second score must be above subCuts2
+    double subCuts3[2] = {0.2,0.3};//If First score below leadCuts2, second score must be above subCuts3
     
     double nBins = 500;
     

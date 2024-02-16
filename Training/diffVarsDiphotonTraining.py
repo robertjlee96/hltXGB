@@ -28,10 +28,10 @@ from operator import itemgetter
 
 np.random.seed(1337)
 
-inFileName = "../../CMSSW_12_4_8/src/allPhotonsNTuples/GGH13andEphemD_GenInfoCUT_DiphotonTrain_1115.root"
+inFileName = "../../CMSSW_12_4_8/src/allPhotonsNTuples/GGHSummer23andEphemD_DiphotonV6_DiphotonTrain_0206.root"
 #inFileName = "../../CMSSW_12_4_8/src/allPhotonsNTuples/GGH13andDataD_AllCombined_DiphotonTrain_0808.root"
 outNamesGen = []
-outNamesGen.append("1213/M7L25_GGH13andDataD_NoTrkIso_M60_PdgIDCut_1213")
+outNamesGen.append("0210/M7L25_GGHSummer23andDataD_M60_PdgIDCut_ScalePosWeight01_0210")
 
 modelNamesB = []
 modelNamesB.append("barrelOut/" + outNamesGen[0] + "_Barrel")
@@ -173,8 +173,8 @@ mdE = mdB
 lrE = lrB
 nEstE = nEstB
 
-#bkgToSig = (158104 + 116852)/(27776 + 10900)
-bkgToSig = 1
+bkgToSig = 0.1
+#bkgToSig = 1
 MDS = 0
 
 startTime = time.time()
@@ -192,6 +192,8 @@ modelE.fit(xTrainE, yTrainE, sample_weight = wTrainE, eval_metric=["auc", "loglo
 gc.collect()
 pickle.dump(modelB, open((modelNamesB[0]+".Model"), "wb"))
 pickle.dump(modelE, open((modelNamesE[0]+".Model"), "wb"))
+modelB.save_model(modelNamesB[0]+".bin")
+modelE.save_model(modelNamesE[0]+".bin")
 
 diffVarsDiphotonUtils.convert_model(modelB.get_booster().get_dump(), input_variables = inputVarNames, output_xml=(modelNamesB[0]+".xml"))
 diffVarsDiphotonUtils.convert_model(modelE.get_booster().get_dump(), input_variables = inputVarNames, output_xml=(modelNamesE[0]+".xml"))

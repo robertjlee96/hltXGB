@@ -155,7 +155,7 @@ def loadFile(inputFile, geoSelection = None, ptCuts = None, massCuts = None):
                 if label == 0:
                     targetValuesBkg.append(np.ones(len(inputValuesBkgLead[-1])) * 1)
                     origWeightsBkg.append(thisWeights)
-                    
+##WEIGHTED DOWN SIGNAL BY 10X!!!!!!!
                 if label == 1:
                     targetValuesSig.append(np.ones(len(inputValuesSigLead[-1])) * 1)
                     origWeightsSig.append(thisWeights)

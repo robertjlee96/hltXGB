@@ -35,11 +35,11 @@ void diphotonSigBkgComp(){
     gStyle->SetTitle(0);
     //gErrorIgnoreLevel = kFatal;
     
-    string fileName = "validationNTuples/1129/M7L25_GGH13andDataD_DiphotonV6_NoTrkIso_M60_Train0814_Vali1129.root";
+    string fileName = "validationNTuples/0210/M7L25_GGHSummer23andDataD_DiphotonV6_M60_ScalePosWeight01_0210.root";
     //string fileName = "validationNTuples/0725/M9LR15_GGH13andData_NoTrkIso_M60_0725Validated.root";
     string genTitleStringSignal = "GGH Signal ";
     string genTitleStringBkg = "Data ";
-    string dirStr ="sigBkgVarPlots/1129/MD7L25_GGH13andDataD_NoTrkIso_M60_Train0814_ValiDiphotonV61129_Added/";
+    string dirStr ="sigBkgVarPlots/0213/MD7L25_GGHSummer23andDataD_M60_ScalePosWeight01_NewCuts_0213_Added/";
     string plotType = "Added";
     //string plotType = "Separate";
     //string dirStr ="varPlots/0130/DataRelaxedUnseededChoose2/";
@@ -52,12 +52,29 @@ void diphotonSigBkgComp(){
     string etaLabels[4] = {"Barrel-Barrel","Barrel-Endcap","Endcap-Endcap","All #eta"};
     string etaFLabels[4] = {"_BB","_BE","_EE","_All"};
 
-    //New cuts (11/09) chosen by hand (just Barrel and Endcap)
-    double leadCuts1[2] = {0.85,0.90};
-    double subCuts1[2] = {0.0,0.0};//If First score above leadCuts1, second score must be above subCuts1
-    double leadCuts2[2] = {0.75,0.8};
-    double subCuts2[2] = {0.015,0.02};//If First score between leadCuts1 and leadCuts2, second score must be above subCuts2
-    double subCuts3[2] = {0.075,0.075};//If First score below leadCuts2, second score must be above subCuts3
+//    //New cuts (11/09) chosen by hand (just Barrel and Endcap)
+//    double leadCuts1[2] = {0.85,0.90};
+//    double subCuts1[2] = {0.0,0.0};//If First score above leadCuts1, second score must be above subCuts1
+//    double leadCuts2[2] = {0.75,0.8};
+//    double subCuts2[2] = {0.015,0.02};//If First score between leadCuts1 and leadCuts2, second score must be above subCuts2
+//    double subCuts3[2] = {0.075,0.075};//If First score below leadCuts2, second score must be above subCuts3
+
+//    //New cuts (02/10) chosen by hand (just Barrel and Endcap)
+//    double leadCuts1[2] = {0.96,0.995};
+//    double subCuts1[2] = {0.0,0.1};//If First score above leadCuts1, second score must be above subCuts1
+//    double leadCuts2[2] = {0.91,0.96};
+//    double subCuts2[2] = {0.1,0.2};//If First score between leadCuts1 and leadCuts2, second score must be above subCuts2
+//    double subCuts3[2] = {0.2,0.3};//If First score below leadCuts2, second score must be above subCuts3
+//    
+    
+    //New cuts (02/12) chosen by hand (just Barrel and Endcap)
+    double leadCuts1[2] = {0.98,0.96};
+    double subCuts1[2] = {0.0,0.1};//If First score above leadCuts1, second score must be above subCuts1
+    double leadCuts2[2] = {0.96,0.8};
+    double subCuts2[2] = {0.1,0.1};//If First score between leadCuts1 and leadCuts2, second score must be above subCuts2
+    double leadCuts3[2] = {0.25,0.0};//Lowest allowed score for first photon
+    double subCuts3[2] = {0.2,0.3};//If First score below leadCuts2, second score must be above subCuts3
+    
     
     string outNameGen = dirStr;
     
@@ -74,7 +91,7 @@ void diphotonSigBkgComp(){
     
     TCanvas *can = new TCanvas ("can","can",10,10,1600,900);
     for(int i = 0; i < nVars; i++){
-    //for(int i = 4; i < 5; i++){//Mass
+    //for(int i = 19; i < nVars; i++){//Mass
     //for(int i = 9; i < 10; i++){//Eta
 
         TH1F *hSigAllLead[4];
@@ -274,7 +291,7 @@ void diphotonSigBkgComp(){
                 
                 if((inXGBSig[indexHigh] > leadCuts1[e1] && inXGBSig[indexLow] > subCuts1[e2])
                    || (inXGBSig[indexHigh] > leadCuts2[e1] && inXGBSig[indexLow] > subCuts2[e2])
-                   || (inXGBSig[indexHigh] < leadCuts2[e1] && inXGBSig[indexLow] > subCuts3[e2])
+                   || (inXGBSig[indexHigh] < leadCuts2[e1] && inXGBSig[indexHigh] > leadCuts3[e1] && inXGBSig[indexLow] > subCuts3[e2])
                    ){
                     if(massCalcXGBSig > 50.0){
                         hSigPassTightXGBLead[e]->Fill(outOne);
@@ -473,7 +490,7 @@ void diphotonSigBkgComp(){
                 
                 if((inXGBBkg[indexHigh] > leadCuts1[e1] && inXGBBkg[indexLow] > subCuts1[e2])
                    || (inXGBBkg[indexHigh] > leadCuts2[e1] && inXGBBkg[indexLow] > subCuts2[e2])
-                   || (inXGBBkg[indexHigh] < leadCuts2[e1] && inXGBBkg[indexLow] > subCuts3[e2])
+                   || (inXGBBkg[indexHigh] < leadCuts2[e1] && inXGBBkg[indexHigh] > leadCuts3[e1] && inXGBBkg[indexLow] > subCuts3[e2])
                    ){
                     if(massCalcXGBBkg > 50.0){
                         hBkgPassTightXGBLead[e]->Fill(outOne);

@@ -27,7 +27,7 @@ from array import array
 # for sklearn, see
 np.random.seed(1337)
 
-inFileName ="../../CMSSW_12_4_8/src/allPhotonsNTuples/GGH13andEphemD_DiphotonV6_DiphotonValidation_1129.root"
+inFileName ="../../CMSSW_12_4_8/src/allPhotonsNTuples/GGHSummer23andEphemD_DiphotonV6_DiphotonValidation_0206.root"
 modelNamesB = []
 modelNamesE = []
 mNamesGen =  []
@@ -46,7 +46,8 @@ fNames = []
 
 
 #mNamesGen.append("0725/M9LR15_GGH13andData_NoTrkIso_M60_0725")
-mNamesGen.append("0814/M7L25_GGH13andDataD_CombinedAll_NoTrkIso_M60_0814")
+#mNamesGen.append("0206/M7L25_GGHSummer23andDataD_M60_PdgIDCut_0206")
+mNamesGen.append("0210/M7L25_GGHSummer23andDataD_M60_PdgIDCut_ScalePosWeight01_0210")
 #mNamesGen.append("1117/M7L25_GGH13andDataD_NoTrkIso_M60_PdgIDCut_1117")
 #mNamesGen.append("0814/M7L35_GGH13andDataD_CombinedAll_NoTrkIso_M60_0814")
 #mNamesGen.append("0814/M9L35_GGH13andDataD_CombinedAll_NoTrkIso_M60_0814")
@@ -63,10 +64,10 @@ mNamesGen.append("0814/M7L25_GGH13andDataD_CombinedAll_NoTrkIso_M60_0814")
 #mNamesGen.append("0726/M15LR50_GGH13andData_NoTrkIso_M60_0726")
 
 for mName in mNamesGen:
-    modelNamesB.append("../Training/barrelOut/" + mName + "_Barrel.model")
-    modelNamesE.append("../Training/endcapOut/" + mName + "_Endcap.model")
+    modelNamesB.append("../Training/barrelOut/" + mName + "_Barrel.Model")
+    modelNamesE.append("../Training/endcapOut/" + mName + "_Endcap.Model")
     #fNames.append("validationNTuples/" + mName + "_Validated")
-    fNames.append("validationNTuples/1129/M7L25_GGH13andDataD_DiphotonV6_NoTrkIso_M60_Train0814_Vali1129")
+    fNames.append("validationNTuples/0210/M7L25_GGHSummer23andDataD_DiphotonV6_M60_ScalePosWeight01_0210")
 
 
 
